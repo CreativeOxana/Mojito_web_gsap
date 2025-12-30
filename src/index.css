@@ -5,7 +5,6 @@
 @font-face {
   font-family: "Modern Negra";
   src: url("/fonts/Modern Negra Demo.ttf") format("truetype");
-  font-display: swap;
 }
 
 @theme {
@@ -119,14 +118,14 @@ body {
         }
 
         .view-cocktails {
-          @apply space-y-5 text-lg lg:max-w-2xs md:max-w-xs w-full;
+          @apply space-y-5 text-lg lg:max-w-2xs md:max-w-xs w-full text-center lg:text-left;
 
           p {
-            @apply text-left;
+            @apply leading-relaxed;
           }
 
           a {
-            @apply font-semibold opacity-80 2xl:text-start text-center hover:text-yellow;
+            @apply font-semibold opacity-80 hover:text-yellow 2xl:text-start;
           }
         }
       }
@@ -189,7 +188,7 @@ body {
     @apply min-h-screen py-28 2xl:px-0 px-5 container mx-auto;
 
     .content {
-      @apply grid grid-cols-1 lg:grid-cols-12 gap-5 mb-10;
+      @apply grid grid-cols-1 lg:grid-cols-12 gap-5;
 
       h2 {
         @apply text-5xl md:text-6xl font-modern-negra max-w-lg;
@@ -217,7 +216,7 @@ body {
     }
 
     .top-grid {
-      @apply grid grid-cols-1 md:grid-cols-12 gap-5 mb-5 md:px-0 px-5;
+      @apply grid grid-cols-1 xl:grid-cols-12 gap-5 mb-5 md:px-0 px-5;
 
       > div {
         @apply rounded-3xl overflow-hidden h-72 relative;

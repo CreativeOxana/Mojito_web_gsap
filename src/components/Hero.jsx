@@ -88,13 +88,13 @@ const Hero = () => {
               </p>
             </div>
 
-            <div className="view-coctails">
+            <div className="view-cocktails">
               <p className="subtitle">
                 Every cocktail on our menu is a blend of premium ingredients,
                 creative flair, and timeless recipes — designed to delight your
                 senses.
               </p>
-              <a href="#coctails">View Cocktails</a>
+              <a href="#cocktails">View Cocktails</a>
             </div>
           </div>
         </div>
