@@ -47,23 +47,20 @@ const Hero = () => {
 
     const startValue = isMobile ? "top 50%" : "center 60%";
     const endValue = isMobile ? "120% top" : "bottom top";
-    const scrubValue = isMobile ? 1 : true;
 
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: "video",
         start: startValue,
         end: endValue,
-        scrub: scrubValue,
+        scrub: true,
         pin: true,
       },
     });
 
-    if (videoRef.current) {
-      videoRef.current.onloadedmetadata = () => {
-        tl.to(videoRef.current, { currentTime: videoRef.current.duration });
-      };
-    }
+    videoRef.current.onloadedmetadata = () => {
+      tl.to(videoRef.current, { currentTime: videoRef.current.duration });
+    };
   }, []);
 
   return (

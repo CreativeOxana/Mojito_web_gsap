@@ -15,16 +15,13 @@
   --font-serif: "DM Serif Text", serif;
 }
 
-html {
-  overflow-x: hidden;
-  width: 100%;
-}
-
+html,
 body {
   width: 100%;
   background-color: black;
   color: white;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 @utility flex-center {
@@ -64,7 +61,7 @@ body {
 
 @layer components {
   main {
-    @apply w-full;
+    @apply w-full overflow-x-hidden;
   }
 
   nav {
@@ -121,14 +118,14 @@ body {
         }
 
         .view-cocktails {
-          @apply space-y-5 text-lg lg:max-w-2xs md:max-w-xs w-full text-center lg:text-left;
+          @apply space-y-5 text-lg lg:max-w-2xs md:max-w-xs w-full;
 
           p {
-            @apply leading-relaxed;
+            @apply text-left;
           }
 
           a {
-            @apply font-semibold opacity-80 hover:text-yellow 2xl:text-start;
+            @apply font-semibold opacity-80 2xl:text-start text-center hover:text-yellow;
           }
         }
       }
@@ -219,7 +216,7 @@ body {
     }
 
     .top-grid {
-      @apply grid grid-cols-1 md:grid-cols-12 gap-5 mb-5 md:px-0 px-5;
+      @apply grid grid-cols-1 xl:grid-cols-12 gap-5 mb-5 md:px-0 px-5;
 
       > div {
         @apply rounded-3xl overflow-hidden h-72 relative;
