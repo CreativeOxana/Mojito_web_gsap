@@ -77,12 +77,9 @@ const Contact = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={social.name}
+                className="hover:opacity-70 transition-opacity"
               >
-                <img
-                  src={social.icon}
-                  alt={social.name}
-                  className="w-10 h-10"
-                />
+                <img src={social.icon} alt={social.name} />
               </a>
             ))}
           </div>
