@@ -78,7 +78,11 @@ const Contact = () => {
                 rel="noopener noreferrer"
                 aria-label={social.name}
               >
-                <img src={social.icon} />
+                <img
+                  src={social.icon}
+                  alt={social.name}
+                  className="w-8 h-8 md:w-10 md:h-10"
+                />
               </a>
             ))}
           </div>
