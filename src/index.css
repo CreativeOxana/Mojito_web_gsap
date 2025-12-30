@@ -370,6 +370,10 @@ body {
       p {
         @apply lg:text-2xl 2xl:text-3xl text-sm;
       }
+
+      img {
+        @apply w-10 h-10 object-contain;
+      }
     }
 
     .drink-img {
