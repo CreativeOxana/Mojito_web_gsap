@@ -1,13 +1,14 @@
 # Mojito Website
 
-Bar/restaurant website with animations built with React and GSAP.
+Bar/restaurant website with animations built with React, TypeScript, and GSAP.
 
 ## Technologies
 
 - **React 19.2** - UI framework
-- **Vite** - build tool
-- **GSAP 3.14** - animation library
-- **Tailwind CSS 4.1** - styling
+- **TypeScript 5.9** - type-safe JavaScript
+- **Vite 7.3** - build tool
+- **GSAP 3.14** - animation library with SplitText & ScrollTrigger
+- **Tailwind CSS 4.1** - utility-first styling
 - **react-responsive** - responsive breakpoints
 
 ## Structure
@@ -36,6 +37,12 @@ Development server:
 npm run dev
 ```
 
+TypeScript type checking:
+
+```bash
+npm run type-check
+```
+
 Production build:
 
 ```bash
@@ -48,6 +55,12 @@ Preview production build:
 npm run preview
 ```
 
+Lint code:
+
+```bash
+npm run lint
+```
+
 ## GSAP Animations
 
 The project uses the following GSAP plugins:
@@ -57,6 +70,8 @@ The project uses the following GSAP plugins:
 
 ## Configuration
 
-- `vite.config.js` - Vite configuration
-- `eslint.config.js` - ESLint rules
-- `constants/index.js` - menu and cocktails data
+- `vite.config.ts` - Vite configuration
+- `tsconfig.json` - TypeScript compiler options
+- `eslint.config.js` - ESLint rules (with TypeScript support)
+- `constants/index.ts` - menu and cocktails data with TypeScript types
+- `src/vite-env.d.ts` - TypeScript declarations for assets and GSAP
