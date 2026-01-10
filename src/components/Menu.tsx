@@ -1,11 +1,10 @@
-"use client";
+import React, { useRef, useState } from "react";
 import { useGSAP } from "@gsap/react";
 import { allCocktails } from "../../constants";
-import { useRef, useState } from "react";
 import gsap from "gsap/all";
 
-const Menu = () => {
-  const contentRef = useRef();
+const Menu: React.FC = () => {
+  const contentRef = useRef<HTMLDivElement>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useGSAP(() => {
@@ -29,12 +28,12 @@ const Menu = () => {
 
   const totalCocktails = allCocktails.length;
 
-  const goToSlide = (index) => {
+  const goToSlide = (index: number) => {
     const newIndex = (index + totalCocktails) % totalCocktails;
     setCurrentIndex(newIndex);
   };
 
-  const getCocktailAt = (indexOffset) => {
+  const getCocktailAt = (indexOffset: number) => {
     return allCocktails[
       (currentIndex + indexOffset + totalCocktails) % totalCocktails
     ];

@@ -1,11 +1,11 @@
+import React, { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import { SplitText } from "gsap/all";
 import gsap from "gsap";
 import { useMediaQuery } from "react-responsive";
-import { useRef } from "react";
 
-const Hero = () => {
-  const videoRef = useRef();
+const Hero: React.FC = () => {
+  const videoRef = useRef<HTMLVideoElement>(null);
 
   const isMobile = useMediaQuery({ maxWidth: 767 });
 
@@ -58,9 +58,13 @@ const Hero = () => {
       },
     });
 
-    videoRef.current.onloadedmetadata = () => {
-      tl.to(videoRef.current, { currentTime: videoRef.current.duration });
-    };
+    if (videoRef.current) {
+      videoRef.current.onloadedmetadata = () => {
+        if (videoRef.current) {
+          tl.to(videoRef.current, { currentTime: videoRef.current.duration });
+        }
+      };
+    }
   }, []);
 
   return (

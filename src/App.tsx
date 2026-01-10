@@ -1,3 +1,4 @@
+import React from "react";
 import { ScrollTrigger, SplitText } from "gsap/all";
 import gsap from "gsap";
 import Navbar from "./components/Navbar";
@@ -10,7 +11,7 @@ import Contact from "./components/Contact";
 
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
-const App = () => {
+const App: React.FC = () => {
   return (
     <main>
       <Navbar />

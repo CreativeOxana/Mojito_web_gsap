@@ -3,7 +3,7 @@ import { navLinks } from "../../constants";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
-const Navbar = () => {
+const Navbar: React.FC = () => {
   useGSAP(() => {
     const navTween = gsap.timeline({
       scrollTrigger: {
